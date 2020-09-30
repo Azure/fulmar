@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-
-# Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-=======
----
-page_type: sample
-languages:
-- csharp
-- javascript
-- html
-- powershell
-products:
-- azure
-description: "Welcome to the Knowledge Mining Solution Accelerator!"
-urlFragment: azure-search-knowledge-mining
----
-
 ![Knowledge Mining Solution Accelerator](images/kmheader.png)
 
 # Knowledge Mining Solution Accelerator
@@ -110,8 +81,3 @@ This folder contains a self paced workshop that teaches you everything you need 
 + [Module 5 - Advanced Azure Cognitive Search: Analyzers and Scoring Profiles](https://github.com/Azure-Samples/azure-search-knowledge-mining/blob/master/workshops/Module%205.md)
 + [Module 6 - Analyzing Your Data with PowerBI](https://github.com/Azure-Samples/azure-search-knowledge-mining/blob/master/workshops/Module%206.md)
 + [Module 7 - Using Azure Cognitive Search to index structured data](https://github.com/Azure-Samples/azure-search-knowledge-mining/blob/master/workshops/Module%207.md) (Optional)
-
-## License
-
-Please refer to [LICENSE](https://github.com/Azure-Samples/azure-search-knowledge-mining/LICENSE.md) for all licensing information.
->>>>>>> upstream/master
