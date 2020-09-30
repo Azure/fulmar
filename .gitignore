@@ -266,5 +266,5 @@ __pycache__/
 *.pubxml
 
 # fulmar
-# **/appsettings.json
-# **/appsettings.Development.json
+**/appsettings.json
+**/appsettings.Development.json
