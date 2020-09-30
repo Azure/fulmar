@@ -311,7 +311,21 @@ function Deploy
         Write-Host "StorageContainerAddress: '$StorageContainerAddress'";
         Write-Host "------------------------------------------------------------";
 	}
-    PrintAppsettings;
+    # PrintAppsettings;
+
+    function WriteConfiguration
+    {
+        $currentConfig = Get-Content -Raw -Path "../02 - Web UI Template/CognitiveSearch.UI/appsettings.json" | ConvertFrom-JSON
+        $currentConfig.SearchServiceName = $searchServiceName
+        $currentConfig.SearchApiKey = $global:searchServiceKey
+        $currentConfig.SearchIndexName = $indexName
+        $currentConfig.SearchIndexerName = $indexerName
+        $currentConfig.StorageAccountName = $storageAccountName
+        $currentConfig.StorageAccountKey = $global:storageAccountKey
+        $StorageContainerAddress = ("https://"+$storageAccountName+".blob.core.windows.net/"+$storageContainerName)
+        $currentConfig.StorageContainerAddress = $global:searchServiceKey
+    }
+    WriteConfiguration
 }
 
 Deploy;
