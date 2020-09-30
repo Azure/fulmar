@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/5e86fc19-6874-4273-b1b8-c8877cd6f4c4/resourceGroups/fulmar/providers/Microsoft.Web/sites/fulmarapp",
+    "appService.deploySubpath": "02 - Web UI Template/CognitiveSearch.UI"
+}

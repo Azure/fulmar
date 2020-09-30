@@ -264,7 +264,6 @@ __pycache__/
 # Publish Profile
 /PublishProfiles/
 *.pubxml
-/.vscode
 
 # fulmar
 **/appsettings.json
