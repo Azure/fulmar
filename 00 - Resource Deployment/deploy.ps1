@@ -299,7 +299,7 @@ function Deploy
 
     function PrintAppsettings
     {
-        Write-Host "Copy and paste the following values to update the appsettings.json file described in the next folder:";
+        Write-Host "Update the appsettings.json file if not done automagically.";
         Write-Host "------------------------------------------------------------";
         Write-Host "SearchServiceName: '$searchServiceName'";
         Write-Host "SearchApiKey: '$global:searchServiceKey'";
@@ -311,11 +311,13 @@ function Deploy
         Write-Host "StorageContainerAddress: '$StorageContainerAddress'";
         Write-Host "------------------------------------------------------------";
 	}
-    # PrintAppsettings;
+    PrintAppsettings;
 
     function WriteConfiguration
     {
-        $currentConfig = Get-Content -Raw -Path "../02 - Web UI Template/CognitiveSearch.UI/appsettings.json" | ConvertFrom-JSON
+        Write-Host "Attempt appsettings.json write.";
+        $appsettings_path =  "../02 - Web UI Template/CognitiveSearch.UI/appsettings.json"
+        $currentConfig = Get-Content -Raw -Path $appsettings_path | ConvertFrom-JSON
         $currentConfig.SearchServiceName = $searchServiceName
         $currentConfig.SearchApiKey = $global:searchServiceKey
         $currentConfig.SearchIndexName = $indexName
@@ -324,6 +326,7 @@ function Deploy
         $currentConfig.StorageAccountKey = $global:storageAccountKey
         $StorageContainerAddress = ("https://"+$storageAccountName+".blob.core.windows.net/"+$storageContainerName)
         $currentConfig.StorageContainerAddress = $global:searchServiceKey
+        $currentConfig | ConvertTo-Json | Out-File -FilePath $appsettings_path
     }
     WriteConfiguration
 }
