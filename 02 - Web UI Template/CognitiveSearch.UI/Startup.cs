@@ -20,6 +20,14 @@ namespace CognitiveSearch.UI
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            if(string.IsNullOrEmpty(Configuration["OrganizationName"]))
+            {
+                var builder = new ConfigurationBuilder()
+                    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                    .AddEnvironmentVariables();
+                Configuration = builder.Build();
+            }
+  
         }
 
         public IConfiguration Configuration { get; }
